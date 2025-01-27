@@ -17,6 +17,8 @@
     position: absolute;
     opacity: 0.7;
     z-index: 1;
+    object-fit: cover;
+    object-position: 90%;
 }
 
 .landsacpe-text {
