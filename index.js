@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
     // page to be rendered as input
     // This page should be in the views folder
     // in the root directory.
-    res.render('welcome.ejs');
+    res.render('main.ejs');
 
 });
 

@@ -13,3 +13,30 @@ body {
   width: 100%;
 }
 
+.navbar {
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+}
+
+.nav-link, .navbar-brand {
+  color: whitesmoke;
+}
+
+@media only screen and (min-width: 992px) {
+  .navbar-toggler {
+    display: none !important;
+  }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.content-container {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  z-index: 4;
+}
