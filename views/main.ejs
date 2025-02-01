@@ -2,17 +2,13 @@
 <%- include('./partials/navbar'); %>
 <div class="main-container">
   <img
-    src="/assets/mainback.webp"
-    alt="harbour-background"
-    class="harbour-background"
-  />
-  <img
-    src="/assets/mainback.webp"
+    src="/assets/us.webp"
     alt="harbour-background"
     class="harbour-background"
   />
   <%- include('./partials/welcome'); %>
 </div>
-<div class="main-container h-md-100"><%- include('./partials/gathering'); %></div>
-<div class="main-container h-md-100"><%- include('./partials/places'); %></div>
+<div class="main-container h-md-100" id="gathering-section"><%- include('./partials/gathering'); %></div>
+<div class="main-container h-md-100"  id="location-section"><%- include('./partials/places'); %></div>
+<div class="main-container h-md-100"  id="rsvp-section"><%- include('./partials/rsvp'); %></div>
 <%- include('./partials/footer'); %>
