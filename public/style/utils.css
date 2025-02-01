@@ -22,4 +22,7 @@
   .w-md-75 {
     width: 75% !important;
   }
+  .word-break-all-md {
+    word-break: break-all;
+  }
 }
