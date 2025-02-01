@@ -10,10 +10,13 @@
   .h-md-90 {
     height: 90% !important;
   }
-  .h-md-45 {
-    height: 45% !important;
+  .h-md-48 {
+    height: 48% !important;
   }
   .w-md-50 {
     width: 50% !important;
+  }
+  .w-md-75 {
+    width: 75% !important;
   }
 }
