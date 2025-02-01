@@ -4,3 +4,16 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  
+@media only screen and (max-width: 992px) {
+  .h-md-90 {
+    height: 90% !important;
+  }
+  .h-md-45 {
+    height: 45% !important;
+  }
+  .w-md-50 {
+    width: 50% !important;
+  }
+}
