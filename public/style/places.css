@@ -1,0 +1,139 @@
+.place-images {
+  width: 150px;
+  height: 150px;
+  z-index: 5;
+  border-radius: 10%;
+}
+
+.first-image {
+  top: 20%;
+  left: 20%;
+  transform: rotate(-40deg);
+  transition: transform 2s, top 1s, left 1s;
+  z-index: 9;
+  object-fit: cover;
+}
+
+.second-image {
+  top: 20%;
+  left: 30%;
+  transform: rotate(-30deg);
+  transition: transform 1s, top 1s, left 1s;
+  z-index: 8;
+  object-fit: cover;
+}
+
+.third-image {
+  top: 20%;
+  left: 40%;
+  transform: rotate(-20deg);
+  transition: transform 2s, 2s, left 1s;
+  z-index: 7;
+  object-fit: cover;
+}
+
+.fourth-image {
+  top: 20%;
+  left: 20%;
+  transform: rotate(-40deg);
+  transition: transform 2s, top 1s, left 1s;
+  z-index: 9;
+  object-fit: cover;
+}
+
+.fifth-image {
+  top: 20%;
+  left: 30%;
+  transform: rotate(-30deg);
+  transition: transform 1s, top 1s, left 1s;
+  z-index: 8;
+  object-fit: cover;
+}
+
+.sixth-image {
+  top: 20%;
+  left: 40%;
+  transform: rotate(-20deg);
+  transition: transform 2s, 2s, left 1s;
+  z-index: 7;
+  object-fit: cover;
+}
+
+.first-image-hover {
+    transform: rotate(-50deg);
+    top: 10%;
+    left: 10%;
+    cursor: pointer;
+}
+
+.second-image-hover {
+    transform: rotate(-20deg);
+    top: 5%;
+    left: 40%;
+    cursor: pointer;
+}
+
+.third-image-hover {
+    transform: rotate(-10deg);
+    top: 10%;
+    left: 60%;
+    cursor: pointer;
+  }
+
+
+.places-background-image-opacity {
+  opacity: 0.6;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+.restaurant-places-background-image-opacity {
+  opacity: 0.6;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+
+.places-background-image-opacity:hover {
+  opacity: 0.4;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.restaurant-places-background-image-opacity:hover {
+  opacity: 0.4;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.places-background-image-opacity-hover {
+  opacity: 0.4;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.places-content-background {
+  background-image: url("../assets/places.webp");
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.7);
+  background-size: cover;
+}
+

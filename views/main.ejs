@@ -1,16 +1,18 @@
 <%- include('./partials/header'); %>
+<%- include('./partials/navbar'); %>
 <div class="main-container">
-    <img
+  <img
     src="/assets/mainback.webp"
     alt="harbour-background"
     class="harbour-background"
-    />  <img
+  />
+  <img
     src="/assets/mainback.webp"
     alt="harbour-background"
     class="harbour-background"
-    />
-    <%- include('./partials/navbar'); %>
-    <%- include('./partials/welcome'); %>
-    <%- include('./partials/gathering'); %>
+  />
+  <%- include('./partials/welcome'); %>
 </div>
+<div class="main-container"><%- include('./partials/gathering'); %></div>
+<div class="main-container"><%- include('./partials/places'); %></div>
 <%- include('./partials/footer'); %>

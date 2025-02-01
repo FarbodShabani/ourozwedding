@@ -15,12 +15,25 @@ body {
 
 .navbar {
   width: 100%;
-  position: absolute;
+  /* position: absolute; */
   z-index: 5;
   top: 0;
+  background-color: #7e99c6;
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #7e99c6,
+    #8699BC
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #7e99c6,
+    #8699BC
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.nav-link, .navbar-brand {
+.nav-link,
+.navbar-brand {
   color: whitesmoke;
 }
 
@@ -39,4 +52,13 @@ body {
   width: 90%;
   height: 80%;
   z-index: 4;
+}
+
+.background-image-opacity {
+  opacity: 0.4;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
 }
