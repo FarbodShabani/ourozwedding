@@ -22,7 +22,20 @@
   .w-md-75 {
     width: 75% !important;
   }
+  .w-md-100 {
+    width: 100% !important;
+  }
   .word-break-all-md {
     word-break: break-all;
+  }
+  
+  .align-items-center-md {
+    align-items: center !important;
+  }  
+  .text-center-md {
+    text-align: center !important;
+  }
+  .d-flex-md {
+    display: flex !important;
   }
 }
