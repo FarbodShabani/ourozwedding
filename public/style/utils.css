@@ -41,7 +41,10 @@
   .d-flex-md {
     display: flex !important;
   }
-  .over-flow-x-md {
-    overflow-x: scroll !important;
+  .over-flow-y-md {
+    overflow-y: scroll !important;
+  }
+  .overflow-x-hidden {
+    overflow-x: hidden !important;
   }
 }
