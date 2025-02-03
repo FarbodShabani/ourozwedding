@@ -16,6 +16,10 @@ const brpbackground = document.getElementsByClassName(
 )[0];
 let collapse = true;
 
+let myScreenOrientation = window.screen.orientation;
+
+myScreenOrientation.lock("portrait");
+
 navbarHamburger.addEventListener("click", () => {
   if (collapse) {
     collapseNavbar?.classList?.add("show");
