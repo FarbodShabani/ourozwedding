@@ -55,10 +55,12 @@
       </div>
       <div class="mb-1">
         <label for="Events" class="form-label">Attending to:</label> <br/>
-        <input type="checkbox" class="form-check-input" id="ceremony" /> 
-        <label class="form-check-label" for="ceremony">Blue Point Reserve</label> <br/>
-        <input type="checkbox" class="form-check-input" id="gathering" />
-        <label class="form-check-label" for="gathering">Jahan Restaurant</label>
+      <input type="radio" class="form-check-input" id="ceremony" name="attending" value="ceremony" /> 
+      <label class="form-check-label" for="ceremony">Blue Point Reserve</label> <br/>
+      <input type="radio" class="form-check-input" id="gathering" name="attending" value="gathering" />
+      <label class="form-check-label" for="gathering">Jahan Restaurant</label> <br/>
+      <input type="radio" class="form-check-input" id="both" name="attending" value="both" />
+      <label class="form-check-label" for="both">Both</label>
       </div>
       <div class="mb-1 w-50">
           <button type="submit" class="btn btn-primary w-100 z-10 mt-3">Submit</button>
