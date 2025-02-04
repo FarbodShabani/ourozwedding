@@ -2,6 +2,7 @@ const navbarHamburger = document.getElementsByClassName("navbar-toggler")[0];
 const pages = document.querySelectorAll(".content-container");
 const collapseNavbar = document.getElementById("collapse-navbar");
 const gatheringPage = document.getElementById("gathering-page");
+const bluePoint = document.getElementById("bpr");
 const bpfimage = document.getElementsByClassName("first-image")[0];
 const bpsimage = document.getElementsByClassName("second-image")[0];
 const bptimage = document.getElementsByClassName("third-image")[0];
@@ -16,7 +17,6 @@ const brpbackground = document.getElementsByClassName(
 )[0];
 let collapse = true;
 
-
 navbarHamburger.addEventListener("click", () => {
   if (collapse) {
     collapseNavbar?.classList?.add("show");
@@ -27,22 +27,11 @@ navbarHamburger.addEventListener("click", () => {
   collapse = !collapse;
 });
 
-const togglePages = (chosenPage) => {
-  if (pages) {
-    for (let page = 0; page < pages.length; page++) {
-      if (!pages[page]?.classList?.contains("d-none")) {
-        pages[page]?.classList?.add("d-none");
-      }
-    }
-    pages[chosenPage]?.classList?.remove("d-none");
-  }
-};
-
-const onClickNavButton = (page) => {
-  console.log(pages);
-
-  togglePages(page);
-};
+bluePoint.addEventListener("touchstart", () => {
+  bpfimage?.classList?.add("first-image-hover");
+  bpsimage?.classList?.add("second-image-hover");
+  bptimage?.classList?.add("third-image-hover");
+});
 
 const mouseHoverIn = (left) => {
   if (left) {
@@ -96,10 +85,15 @@ const mouseHoverOutImage = (left) => {
 };
 
 const placeClick = (left) => {
-
-    if (left) {
-        window.open("https://www.google.com/maps/place/14+Blues+Point+Rd,+McMahons+Point+NSW+2060/@-33.8487491,151.2029857,17.76z/data=!4m6!3m5!1s0x6b12ae58debd354d:0x16ed68f19c0b6029!8m2!3d-33.8492008!4d151.2032198!16s%2Fg%2F11c24xsq_d?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D","_blank");
-    } else {
-        window.open("https://www.google.com/maps/place/Persian+BBQ+house+%2FJahan+Restaurant/@-33.8307932,151.1243409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12a59a31f17d57:0x4cd9c0942434be6a!8m2!3d-33.8307932!4d151.1269212!16s%2Fg%2F11v0g63b9x?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D","_blank");
-    }
-}
+  if (left) {
+    window.open(
+      "https://www.google.com/maps/place/14+Blues+Point+Rd,+McMahons+Point+NSW+2060/@-33.8487491,151.2029857,17.76z/data=!4m6!3m5!1s0x6b12ae58debd354d:0x16ed68f19c0b6029!8m2!3d-33.8492008!4d151.2032198!16s%2Fg%2F11c24xsq_d?entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+      "_blank"
+    );
+  } else {
+    window.open(
+      "https://www.google.com/maps/place/Persian+BBQ+house+%2FJahan+Restaurant/@-33.8307932,151.1243409,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12a59a31f17d57:0x4cd9c0942434be6a!8m2!3d-33.8307932!4d151.1269212!16s%2Fg%2F11v0g63b9x?hl=en-US&entry=ttu&g_ep=EgoyMDI1MDEyNy4wIKXMDSoASAFQAw%3D%3D",
+      "_blank"
+    );
+  }
+};
