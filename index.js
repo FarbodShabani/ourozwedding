@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
 
 });
 
+app.post("rsvp", (req,res)  => {
+    
+})
+
 
 app.listen(4000, function () {
     console.log('listening to port 4000')
