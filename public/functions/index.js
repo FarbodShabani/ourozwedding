@@ -65,7 +65,8 @@ jahanResturant.addEventListener("touchmove", () => {
   bptimage?.classList?.remove("third-image-hover");
 });
 
-locationsContainer.addEventListener("touchstart", () => {
+locationsContainer.addEventListener("touchstart", (event) => {
+  event.stopPropagation();
   bpfimage?.classList?.remove("first-image-hover");
   bpsimage?.classList?.remove("second-image-hover");
   bptimage?.classList?.remove("third-image-hover");
