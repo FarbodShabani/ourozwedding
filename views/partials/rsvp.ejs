@@ -1,11 +1,11 @@
 <div
-  class="max-height-section content-container d-flex flex-column justify-content-between align-items-center gathering-content-background over-flow-y-md overflow-x-hidden"
+  class="max-height-section in-section-container d-flex flex-column justify-content-between align-items-center gathering-content-background over-flow-y-md overflow-x-hidden"
 >
   <div class="background-image-opacity h-md-150"></div>
   <h1 class="z-10 playwrite-au-sa mt-4">RSVP</h1>
   <form
-    class="w-100 h-75 d-flex flex-column flex-lg-row justify-content-around align-items-center z-10 "
-    action="/submitting-rsvp" method="post"
+    class="mt-2 w-100 h-100 d-flex flex-column flex-lg-row justify-content-around align-items-center z-10 "
+    action="/action_page.php" method="post"
   >
     <div
       class="w-25 w-md-100 h-100 d-flex flex-column justify-content-around align-items-start align-items-center-md text-start ms-4"
@@ -22,7 +22,7 @@
       </div>
       <div class="mb-1 w-75 d-flex-md d-block flex-column justify-content-center align-items-center">
         <label for="song-name" class="form-label text-center-md w-md-100"
-          >You'll find me on the dance floor when they play
+          >I'm on the dance floor when they play
           </label
         >
         <input type="text" class="form-control " id="song-name" />
@@ -55,10 +55,12 @@
       </div>
       <div class="mb-1">
         <label for="Events" class="form-label">Attending to:</label> <br/>
-        <input type="checkbox" class="form-check-input" id="ceremony" /> 
-        <label class="form-check-label" for="ceremony">Blue Point Reserve</label> <br/>
-        <input type="checkbox" class="form-check-input" id="gathering" />
-        <label class="form-check-label" for="gathering">Jahan Restaurant</label>
+      <input type="radio" class="form-check-input" id="ceremony" name="attending" value="ceremony" /> 
+      <label class="form-check-label" for="ceremony">Blue Point Reserve</label> <br/>
+      <input type="radio" class="form-check-input" id="gathering" name="attending" value="gathering" />
+      <label class="form-check-label" for="gathering">Jahan Restaurant</label> <br/>
+      <input type="radio" class="form-check-input" id="both" name="attending" value="both" />
+      <label class="form-check-label" for="both">Both</label>
       </div>
       <div class="mb-1 w-50">
           <button type="submit" class="btn btn-primary w-100 z-10 mt-3">Submit</button>
