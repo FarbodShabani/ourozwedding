@@ -4,6 +4,7 @@ const collapseNavbar = document.getElementById("collapse-navbar");
 const gatheringPage = document.getElementById("gathering-page");
 const bluePoint = document.getElementById("bpr");
 const jahanResturant = document.getElementById("jr");
+const locationsContainer = document.getElementById("locations");
 const bpfimage = document.getElementsByClassName("first-image")[0];
 const bpsimage = document.getElementsByClassName("second-image")[0];
 const bptimage = document.getElementsByClassName("third-image")[0];
@@ -62,6 +63,24 @@ jahanResturant.addEventListener("touchmove", () => {
   bpfimage?.classList?.remove("first-image-hover");
   bpsimage?.classList?.remove("second-image-hover");
   bptimage?.classList?.remove("third-image-hover");
+});
+
+locationsContainer.addEventListener("touchstart", () => {
+  bpfimage?.classList?.remove("first-image-hover");
+  bpsimage?.classList?.remove("second-image-hover");
+  bptimage?.classList?.remove("third-image-hover");
+  bpfoimage?.classList?.remove("first-image-hover");
+  bpfiimage?.classList?.remove("second-image-hover");
+  bpsiimage?.classList?.remove("third-image-hover");
+});
+
+locationsContainer.addEventListener("touchmove", () => {
+  bpfimage?.classList?.remove("first-image-hover");
+  bpsimage?.classList?.remove("second-image-hover");
+  bptimage?.classList?.remove("third-image-hover");
+  bpfoimage?.classList?.remove("first-image-hover");
+  bpfiimage?.classList?.remove("second-image-hover");
+  bpsiimage?.classList?.remove("third-image-hover");
 });
 
 const mouseHoverIn = (left) => {
