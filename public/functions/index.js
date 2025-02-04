@@ -74,7 +74,8 @@ locationsContainer.addEventListener("touchstart", () => {
   bpsiimage?.classList?.remove("third-image-hover");
 });
 
-locationsContainer.addEventListener("touchmove", () => {
+locationsContainer.addEventListener("touchmove", (event) => {
+  event.stopPropagation();
   bpfimage?.classList?.remove("first-image-hover");
   bpsimage?.classList?.remove("second-image-hover");
   bptimage?.classList?.remove("third-image-hover");
