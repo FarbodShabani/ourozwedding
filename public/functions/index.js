@@ -33,6 +33,12 @@ bluePoint.addEventListener("touchstart", () => {
   bptimage?.classList?.add("third-image-hover");
 });
 
+bluePoint.addEventListener("touchmove", () => {
+  bpfimage?.classList?.add("first-image-hover");
+  bpsimage?.classList?.add("second-image-hover");
+  bptimage?.classList?.add("third-image-hover");
+});
+
 const mouseHoverIn = (left) => {
   if (left) {
     bpfimage?.classList?.add("first-image-hover");
