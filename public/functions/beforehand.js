@@ -96,7 +96,6 @@ const rsvpSubmit = async () => {
     attending,
   });
 
-  console.log("response: ", response);
 
   if (response.data.success === true) {
     responseMessage.innerHTML = "";
