@@ -77,7 +77,7 @@ const rsvpSubmit = async () => {
 
 
 
-  if (!guestName || !dietary || !attending) { 
+  if (!guestName  || !attending) { 
     responseMessage.innerHTML = "";
     responseMessage.classList.remove("success");
     responseMessage.classList.add("error");
