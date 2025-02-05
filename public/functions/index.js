@@ -73,6 +73,4 @@ jahanResturant.addEventListener("touchmove", () => {
 
 toastBody.addEventListener("click", () => {
   toastBody.classList.remove("active");
-  showSuccessToastButton.disabled = false;
-  showErrorToastButton.disabled = false;
 });
