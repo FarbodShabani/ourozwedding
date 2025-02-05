@@ -19,6 +19,8 @@ const brpbackground = document.getElementsByClassName(
   "resturant-places-background-image-opacity"
 )[0];
 
+const toastBody = document.getElementsByClassName("toast-body")[0];
+
 
 let collapse = true;
 
@@ -68,3 +70,9 @@ jahanResturant.addEventListener("touchmove", () => {
   bptimage?.classList?.remove("third-image-hover");
 });
 
+
+toastBody.addEventListener("click", () => {
+  toastBody.classList.remove("active");
+  showSuccessToastButton.disabled = false;
+  showErrorToastButton.disabled = false;
+});

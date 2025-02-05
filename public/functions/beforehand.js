@@ -64,33 +64,50 @@ const placeClick = (left) => {
 };
 
 const rsvpSubmit = async () => {
-  const guestName = document.getElementById("first-last-name").value;
-  const companionName = document.getElementById("companion-name").value;
-  const songs = document.getElementById("song-name").value;
-  const dietary = document.getElementById("dietary").value;
-  const phone = document.getElementById("phone-number").value;
-  const email = document.getElementById("Email").value;
+  const guestName = document.getElementById("first-last-name")?.value;
+  const companionName = document.getElementById("companion-name")?.value;
+  const songs = document.getElementById("song-name")?.value;
+  const dietary = document.getElementById("dietary")?.value;
+  const phone = document.getElementById("phone-number")?.value;
+  const email = document.getElementById("Email")?.value;
   const attending = document.querySelector(
     'input[name="attending"]:checked'
   )?.value;
 
-  console.log("attending: ", attending);
 
-  if (!guestName || !companionName || !dietary || !phone || !email) {
-    
+  if (!guestName || !companionName || !dietary || !phone || !email || !attending) { 
+    toastBody.innerHTML = "";
+    toastBody.classList.remove("success");
+    toastBody.classList.add("error");
+    toastBody.classList.add("active");
+    toastBody.innerHTML = "Please complete the form";
+    return false;
   }
 
-  const response = await axios.post('/rsvp', {
+  const response = await axios.post("/rsvp", {
     guestName,
     companionName,
     songs,
     phone,
     email,
     dietary,
-    attending
+    attending,
   });
 
   console.log("response: ", response);
-  
+
+  if (response.data.success === true) {
+    toastBody.innerHTML = "";
+    toastBody.classList.remove("error");
+    toastBody.classList.add("success");
+    toastBody.classList.add("active");
+    toastBody.innerHTML = response.data.message;
+  } else {
+    toastBody.innerHTML = "";
+    toastBody.classList.remove("success");
+    toastBody.classList.add("error");
+    toastBody.classList.add("active");
+    toastBody.innerHTML = response.data.message;
+  }
 
 };

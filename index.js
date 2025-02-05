@@ -53,7 +53,7 @@ app.post("/rsvp", async (req, res) => {
     findGuest.attending = rsvpDetails.attending ? rsvpDetails.attending : findGuest.attending;
     findGuest.songs = rsvpDetails.songs ? rsvpDetails.songs : findGuest.songs;
     await findGuest.save();
-    return res.status(202).json({ success: true, message: "Your Rsvp is updated" });
+    return res.status(202).json({ success: true, message: "Your Rsvp is updated! See you soon." });
 } else {
     const newRsvp = new rsvp({
       name: rsvpDetails.name,
@@ -65,11 +65,11 @@ app.post("/rsvp", async (req, res) => {
       attending: rsvpDetails.attending,
     });
     await newRsvp.save();
-    console.log("new guest");
-    return res.json({ success: true, message: "Your Rsvp is created" });
+    console.log("new guest", newRsvp);
+    return res.status(201).json({ success: true, message: "Your Rsvp is created! See you soon." });
   }
 } catch (error) {
-  return res.status(505).json({success: false, message: "contact Farbod Or Saina"})
+  return res.status(505).json({success: false, message: "Contact Saina Or Farbod!"})
 }
 });
 
