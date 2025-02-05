@@ -70,20 +70,22 @@ const rsvpSubmit = async () => {
   const dietary = document.getElementById("dietary")?.value;
   const phone = document.getElementById("phone-number")?.value;
   const email = document.getElementById("Email")?.value;
+  const responseMessage = document.getElementById("response-message");
   const attending = document.querySelector(
     'input[name="attending"]:checked'
   )?.value;
 
 
-  if (!guestName || !companionName || !dietary || !phone || !email || !attending) { 
-    toastBody.innerHTML = "";
-    toastBody.classList.remove("success");
-    toastBody.classList.add("error");
-    toastBody.classList.add("active");
-    toastBody.innerHTML = "Please complete the form";
-    return false;
-  }
 
+  if (!guestName || !companionName || !dietary || !phone || !email || !attending) { 
+    responseMessage.innerHTML = "";
+    responseMessage.classList.remove("success");
+    responseMessage.classList.add("error");
+    responseMessage.innerHTML = "Please complete the form";
+    return false;
+  } else {
+
+    responseMessage.innerHTML = "";
   const response = await axios.post("/rsvp", {
     guestName,
     companionName,
@@ -97,17 +99,15 @@ const rsvpSubmit = async () => {
   console.log("response: ", response);
 
   if (response.data.success === true) {
-    toastBody.innerHTML = "";
-    toastBody.classList.remove("error");
-    toastBody.classList.add("success");
-    toastBody.classList.add("active");
-    toastBody.innerHTML = response.data.message;
+    responseMessage.innerHTML = "";
+    responseMessage.classList.remove("error");
+    responseMessage.classList.add("success");
+    responseMessage.innerHTML = response.data.message;
   } else {
-    toastBody.innerHTML = "";
-    toastBody.classList.remove("success");
-    toastBody.classList.add("error");
-    toastBody.classList.add("active");
-    toastBody.innerHTML = response.data.message;
+    responseMessage.innerHTML = "";
+    responseMessage.classList.remove("success");
+    responseMessage.classList.add("error");
+    responseMessage.innerHTML = response.data.message;
   }
-
+}
 };

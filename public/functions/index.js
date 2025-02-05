@@ -70,7 +70,3 @@ jahanResturant.addEventListener("touchmove", () => {
   bptimage?.classList?.remove("third-image-hover");
 });
 
-
-toastBody.addEventListener("click", () => {
-  toastBody.classList.remove("active");
-});

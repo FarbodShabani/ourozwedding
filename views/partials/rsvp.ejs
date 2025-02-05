@@ -14,18 +14,18 @@
         <label for="first-last-name" class="form-label"
           >First Name & Last Name</label
         >
-        <input type="text" class="form-control" id="first-last-name" />
+        <input type="text" class="form-control" id="first-last-name" required="true"/>
       </div>
       <div class="mb-1">
         <label for="companion-name" class="form-label">Companion</label>
-        <input type="text" class="form-control" id="companion-name" />
+        <input type="text" class="form-control" id="companion-name" required="true"/>
       </div>
       <div class="mb-1 w-75 d-flex-md d-block flex-column justify-content-center align-items-center">
         <label for="song-name" class="form-label text-center-md w-md-100"
           >I'm on the dance floor when they play
           </label
         >
-        <input type="text" class="form-control " id="song-name" />
+        <input type="text" class="form-control " id="song-name" required="true"/>
       </div>
       
     <div class="mb-1">
@@ -33,7 +33,7 @@
           >Dietary Restrictions:
           </label
         >
-        <input type="text" class="form-control" id="dietary" />
+        <input type="text" class="form-control" id="dietary" required="true"/>
       </div>
     </div>
     <div
@@ -44,14 +44,14 @@
           >Phone number:
           </label
         >
-        <input type="text" class="form-control" id="phone-number" />
+        <input type="text" class="form-control" id="phone-number" required="true"/>
       </div>
     <div class="mb-1">
         <label for="Email" class="form-label"
           >Email:
           </label
         >
-        <input type="email" class="form-control" id="Email" />
+        <input type="email" class="form-control" id="Email" required="true"/>
       </div>
       <div class="mb-1">
         <label for="Events" class="form-label">Attending to:</label> <br/>
@@ -64,6 +64,7 @@
       </div>
       <div class="mb-1 w-50">
           <button type="button" onclick="rsvpSubmit()" class="btn btn-primary w-100 z-10 mt-3">Submit</button>
+          <span id="response-message"> </span>
       </div>
     </div>
 </form>
