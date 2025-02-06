@@ -60,7 +60,7 @@ app.post("/rsvp", async (req, res) => {
       cName: rsvpDetails.cName,
       email: rsvpDetails.email,
       phone: rsvpDetails.phone,
-      dietary: rsvpDetails.diet,
+      diet: rsvpDetails.diet,
       songs: rsvpDetails.songs,
       attending: rsvpDetails.attending,
     });
